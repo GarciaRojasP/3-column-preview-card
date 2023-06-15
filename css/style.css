@@ -1,0 +1,207 @@
+:root{
+
+    /*==================== COLOR PRIMARY ====================*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /*==================== COLOR NEUTRAL ====================*/
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+
+    
+    /*==================== TYPOGRAPHY ====================*/
+    --body: 'Lexend Deca', sans-serif;
+    --heading: 'Big Shoulders Display', cursive;
+
+    /*==================== FONT ====================*/
+    --font-small: 14px;
+    --font-normal: 15px;
+    --font-big: 2rem;
+
+    /*==================== FONT WEIGHT ====================*/
+    --w-regular: 400; 
+    --w-bold: 700; 
+
+    /*==================== MARGING ====================*/
+    --m-botton: 1.5rem;
+
+    /*==================== PADDING ====================*/
+    --p-container: 3rem;
+
+    /*==================== lINE HEIGHT ====================*/
+    --line-height: 1.5;
+
+}
+
+/*==================== STYLE GENERAL ====================*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2{
+    margin:0;
+}
+
+body{
+    font-family: var(--body);
+    font-size: var(--font-normal);
+    line-height: var(--line-height);
+    background-color: var(--transparent-white);
+    font-weight: var(--w-regular);
+    color: var(--transparent-white);
+}
+
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1rem;
+}
+
+.main{
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 1rem 0;
+}
+
+/*==================== CARD ====================*/
+.card{
+    grid-template-columns: repeat(1, minmax(90%, 320px));
+    gap: 0;
+    margin: 0 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    /*box-shadow: 0 0 5px -1px #000;*/
+}
+
+.title__principal{
+    display: none;
+}
+
+.sedans, .suvs, .luxury{
+    padding: var(--p-container);
+}
+
+.sedans{
+    background-color: var(--bright-orange);
+    animation: sedans 1s;
+    -webkit-animation: sedans 2s both ease-in-out;
+}
+
+@keyframes sedans {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotatey(360deg);
+        -webkit-transform: rotatey(360deg);
+        -moz-transform: rotatey(360deg);
+        -ms-transform: rotatey(360deg);
+        -o-transform: rotatey(360deg);
+}
+}
+
+.suvs{
+    background-color: var(--dark-cyan);
+    animation: suvs 1s 1s ;
+    -webkit-animation: suvs 2s 1s both ease-in-out;
+}
+
+@keyframes suvs {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotatey(360deg);
+        -webkit-transform: rotatey(360deg);
+        -moz-transform: rotatey(360deg);
+        -ms-transform: rotatey(360deg);
+        -o-transform: rotatey(360deg);
+    }
+}
+
+.luxury{
+    background-color: var(--very-dark-cyan);
+    animation: luxury 1s 2s both;
+    -webkit-animation: luxury 2s 2s both ease-in-out;
+}
+
+@keyframes luxury {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotatey(360deg);
+        -webkit-transform: rotatey(360deg);
+        -moz-transform: rotatey(360deg);
+        -ms-transform: rotatey(360deg);
+        -o-transform: rotatey(360deg);
+    }
+}
+
+.img__card{
+    display: block;
+    width: 64px;
+    margin-bottom: var(--m-botton);
+}
+
+.title{
+    color: var(--very-light-gray);
+    font-family: var(--heading);
+    font-weight: var(--w-bold);
+    font-size: var(--font-big);
+    margin-bottom: var(--m-botton);
+    text-transform: uppercase;
+
+}
+
+.paragraph{
+    margin-bottom: var(--m-botton);
+}
+
+.button{
+    text-transform: capitalize;
+    padding: 1em 2em;
+    border: 2px solid var(--very-light-gray);
+    mix-blend-mode: screen;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: 0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+}
+
+.button:hover{
+    background-color: transparent;
+    color: inherit;
+}
+
+@media screen and (min-width:768px) {
+    .card{
+        grid-template-columns: repeat(3, minmax(auto, 305px));
+    }
+
+    .paragraph{
+        --m-botton: 5rem;
+        margin-bottom: var(--m-botton);
+    }
+}
