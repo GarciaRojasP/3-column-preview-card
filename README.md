@@ -21,12 +21,12 @@ Esto es una solución de la [3-column preview card component challenge on Fronte
 
 ### Screenshot
 
-![]()
+![](https://github.com/GarciaRojasP/3-column-preview-card/assets/119550417/eac5334a-75eb-4172-839e-b3d7bed12bc6)
 
 ### Links
 
-- Ver código: [3-column preview card]()
-- Ver demo: [3-column preview card]()
+- Ver código: [3-column preview card](https://github.com/GarciaRojasP/3-column-preview-card)
+- Ver demo: [3-column preview card](https://3-column-preview-card-zeta-peach.vercel.app/)
 
 ## Mi proceso
 
@@ -34,8 +34,10 @@ Esto es una solución de la [3-column preview card component challenge on Fronte
 
 - Marcado HTML5 semántico
 - Propiedades personalizadas de CSS
+- Usando mix-blend-mode
 - CSS grid y flexbox
 - Flujo de trabajo centrado en Mobile-firs
+- Animación
 
 ## Autor
 
